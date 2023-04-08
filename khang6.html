@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./khang1.css">
+  <script src="./khang1.js"></script>
+</head>
+<style> 
+
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    
+ 
+  
+  }
+  nav ul {
+    list-style: none;
+   
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+   padding-left: 3px;
+   padding-bottom: 10px;
+   padding-right: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: gray;
+  }
+  
+  
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+   
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: white;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+  
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+  
+  nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Nunito;
+}
+
+h1 {
+   font-size: 250%
+}
+
+
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+
+
+
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+
+
+#title h1 {
+ transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%;
+
+}
+
+#slide1 {
+  background-image: url(https://wallpapercave.com/uwp/uwp2499113.jpeg);
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url(https://wallpapers.com/images/hd/happy-desktop-7z4jf5j46kbtt75k.jpg);
+  z-index:2;
+}
+
+#slide3{
+  background-image: url(https://thumbs.dreamstime.com/z/web-188452570.jpg);
+
+}
+
+
+</style>
+<body>
+  
+   
+  <div id="slide1" class="slide">
+    <nav class="stroke">
+    <div class="overlay"> <ul>
+     <li><a href="khang1.html">Home</a></li>
+     <li><a href="khang5.html">History</a></li>
+    <li><a href="khang6.html">Tips</a></li>
+     <li><a href="khang4.html">Contact us</a></li>
+     
+   </ul></div>
+   </nav>
+    <div class="title">
+      <h1>Mindfulness</h1>
+      <p style="font-size: 140%;
+      line-height: 150%;
+      color: #333;">Become aware of the role your thoughts play in the quality of your daily life. Focusing on bad things and negative emotions can be destructive. You can learn to be happier when you stop dwelling on the negative and focus on the more positive side of things.</p>
+    </div>
+  </div>
+  
+  <div id="slide2" class="slide">
+    <div class="title">
+      <h1>Forgiveness</h1>
+      <p style="font-size: 140%;
+      line-height: 150%;
+      color: #333;">Anger toward yourself, toward things that have happened in your life, or, anger toward other people can be a significant burden. When you can let go of anger, you may begin learning how to be happy with yourself.</p>
+    </div>
+     
+  </div>
+  
+  <div id="slide3" class="slide">
+    <div class="title">
+      <h1>Practice gratitude</h1>
+      <p style="font-size: 140%;
+      line-height: 150%;
+      color: #333;" >Even during the most difficult life experiences, there are often things to be grateful for. Acknowledging what is good in your life is an essential step in learning how to live a happy life.</p>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
